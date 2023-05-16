@@ -1,0 +1,19 @@
+.random {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.photo {
+    height: 250px;
+    width: 250px;
+    margin-right: 150px;
+    border: 1px solid;
+}
+
+.stats {
+    display: flex;
+    border: 1px solid;
+    width: 700px;
+    height: 250px;
+}
