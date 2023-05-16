@@ -17,3 +17,17 @@
     width: 700px;
     height: 250px;
 }
+
+.stats-list {
+    text-align: left;
+    width: 180px;
+}
+
+.abilities-list {
+    text-align: left;
+    width: 150px;
+}
+
+.poke-name {
+    text-transform: uppercase;
+}
