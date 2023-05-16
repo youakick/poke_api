@@ -23,14 +23,14 @@ function RandomPokemon() {
                     <img className='photo' src={data.sprites.other.home.front_shiny} alt='front_default'></img>
                 </div>
                 <div className='stats'>
-                    <h1>Name: {data.name}</h1>
+                    <h2 className='poke-name'>Name: {data.name}</h2>
                     <h2>Height: {data.height}</h2>
                     <h2>Weight: {data.weight}</h2>
                     <div>Stats:{data.stats.map((elem) =>  {
-                        return <li key={uuidv4()}>{elem.stat.name} - {elem.base_stat}</li>
+                        return <li className='stats-list' key={uuidv4()}>{elem.stat.name} - {elem.base_stat}</li>
                     })}</div>
                     <div>Abilities: {data.abilities.map((elem) => {
-                        return <li key={uuidv4()}>{elem.ability.name}</li>
+                        return <li className='abilities-list' key={uuidv4()}>{elem.ability.name}</li>
                     })}</div>
                 </div>
             </div>
