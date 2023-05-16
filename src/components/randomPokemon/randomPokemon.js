@@ -9,7 +9,6 @@ function RandomPokemon() {
     
     const [data, setData] = useState(null)
     const {randomPokemonData} = useFetchData()
-    console.log("data")
 
     useEffect(() => {
     randomPokemonData(setData)
