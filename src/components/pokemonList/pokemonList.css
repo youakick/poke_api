@@ -1,0 +1,10 @@
+.pokemons-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pokemons-list-items {
+    width: 23%;
+    margin-bottom: 20px;
+}
