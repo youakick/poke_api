@@ -15,7 +15,7 @@ const PokemonList = () => {
     console.log(data)
 
     return (
-        <div>
+        <div className='main-pokemon-list'>
             {data === null ? <div>Loading...</div> : <div className='pokemons-list'>
                 {data.map((elem) => {
                     return <div key={uuidv4()} className='pokemons-list-items'>

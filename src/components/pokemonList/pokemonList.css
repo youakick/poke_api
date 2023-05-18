@@ -1,7 +1,14 @@
+.main-pokemon-list {
+    margin: 0 auto;
+    width: 80%;
+}
+
 .pokemons-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    border: 1px solid;
+    margin-top: 15px;
 }
 
 .pokemons-list-items {
