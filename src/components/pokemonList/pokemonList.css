@@ -15,3 +15,9 @@
     width: 23%;
     margin-bottom: 20px;
 }
+
+button {
+    cursor: pointer;
+    width: 120px;
+    margin-left: 5px;
+}
