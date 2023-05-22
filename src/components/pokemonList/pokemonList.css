@@ -12,6 +12,7 @@
 }
 
 .pokemons-list-items {
+    display: inline-block;
     width: 23%;
     margin-bottom: 20px;
 }
@@ -19,5 +20,5 @@
 button {
     cursor: pointer;
     width: 120px;
-    margin-left: 5px;
+    margin: 0px 5px 0 5px;
 }
