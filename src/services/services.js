@@ -22,9 +22,8 @@ const useFetchData = () => {
         }
     }
 
-    const pokemonListData = async (func) => {
-        try {
-            fetch('https://pokeapi.co/api/v2/pokemon?limit=16')
+    const pokemonListData = async (func, offset) => {
+            fetch(`https://pokeapi.co/api/v2/pokemon?limit=16&offset=${offset}`)
                 .then(response => response.json())
                 .then(data => {
                     const requests = data.results.map(pokemon => fetch(pokemon.url).then(response => response.json()));
@@ -39,13 +38,12 @@ const useFetchData = () => {
                 .catch(error => {
                     console.error('Error fetching Pokemon list:', error);
                 });
-        } catch (e) {
-            console.log(e)
-        }
     }
+
     return {returnedData,
             randomPokemonData,
-            pokemonListData}
+            pokemonListData
+            }
 }
 
 
