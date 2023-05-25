@@ -23,7 +23,7 @@ const useFetchData = () => {
     }
 
     const pokemonListData = async (func, offset) => {
-            fetch(`https://pokeapi.co/api/v2/pokemon?limit=16&offset=${offset}`)
+            fetch(`https://pokeapi.co/api/v2/pokemon?limit=100&offset=${offset}`)
                 .then(response => response.json())
                 .then(data => {
                     const requests = data.results.map(pokemon => fetch(pokemon.url).then(response => response.json()));
