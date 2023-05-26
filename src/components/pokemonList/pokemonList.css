@@ -17,8 +17,21 @@
     margin-bottom: 20px;
 }
 
+.pokemons-element {
+    cursor: pointer;
+    border: 1px solid;
+    border-radius: 100%;
+    margin: 10px 45px;
+}
+
+.pokemon-name {
+    text-transform: capitalize;
+    margin: -15px 0 15px 0;
+}
+
 button {
     cursor: pointer;
     width: 120px;
     margin: 0px 5px 0 5px;
 }
+

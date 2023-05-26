@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
+import {Link} from 'react-router-dom';
 import React from 'react';
 import useFetchData from '../../services/services';
-import { v4 as uuidv4 } from 'uuid'
+
 import '../pokemonList/pokemonList.css'
 
 const PokemonList = () => {
@@ -27,10 +28,12 @@ const PokemonList = () => {
             } else {
                 const pageArr = data.slice(startIndex, endIndex)
                 return pageArr.map((elem) => { 
-                return <div key={uuidv4()} className='pokemons-list-items'>
-                        <img src={elem.sprites.front_default} alt={elem.id}/>
-                        <div>{elem.name}</div>
-                    </div>
+                return <Link key={elem.id} className='pokemons-list-items' to={`/selected/${elem.id}`}>
+                            <div className='pokemons-element'>
+                                <img src={elem.sprites.front_default} alt={elem.id}/>
+                                <div className='pokemon-name'>{elem.name}</div>
+                            </div>
+                    </Link>
                 }
                 )
             }         
