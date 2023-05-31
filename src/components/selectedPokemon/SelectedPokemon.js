@@ -41,9 +41,6 @@ const SelectedPokemon = () => {
         setSendRequest(!sendRequest)
     }
 
-    console.log(submitedInputValue)
-    console.log(sendRequest)
-
     return (<div>
         <Link to={'/'}>
             <Button variant="primary" className='nav-buttons'>Return to home page</Button>
