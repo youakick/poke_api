@@ -1,0 +1,22 @@
+.nav-buttons {
+    margin: 5px;
+    height: 60px;
+    color:rgb(247, 247, 126);
+}
+
+.selected-main-content {
+    display: flex;
+    justify-content: center;
+    vertical-align: center;
+}
+
+.selected-pokemon-icon {
+    border: solid 1px;
+    width: 250px;
+    height: 250px;
+    margin: 10px 5px 10px 5px;
+}
+
+.selected-stats {
+    margin: 10px 0 0 25px;
+}
