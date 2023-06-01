@@ -40,13 +40,13 @@ const useFetchData = () => {
                 });
     }
 
-    const pokemonFromInput = async (func, text) => {
+    const pokemonFromInput = async (func, text, error) => {
         try {
             const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${text}/`)
                 .then(resp => resp.json())
             return func(response)
         } catch (e) {
-            console.log(e)
+            error(e)
         }
     }
 

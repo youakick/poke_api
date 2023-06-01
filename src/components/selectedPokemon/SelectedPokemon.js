@@ -15,13 +15,16 @@ const SelectedPokemon = () => {
     const [inputValue, setInputValue] = useState('')
     const [submitedInputValue, setSubmitedInputValue] = useState('')
     const [sendRequest, setSendRequest] = useState(true)
+    const [error, setError] = useState(null)
+
+    console.log(error)
     
     useEffect(() => {
         if(submitedInputValue === '') {
             dataOfSelectedPokemon(setSelectedPokemon, pokemonId)
             randomPokemonData(setRandomChar)
         } else {
-            pokemonFromInput(setSelectedPokemon, submitedInputValue)
+            pokemonFromInput(setSelectedPokemon, submitedInputValue, setError)
         }
     }, [pokemonId, sendRequest])
 
@@ -41,13 +44,22 @@ const SelectedPokemon = () => {
         setSendRequest(!sendRequest)
     }
 
+    const inputInfo = () => {
+        return error === null ? 'Enter pokemon name' : 'Error, try again'
+    }
+
+    
+    useEffect(() => {
+        const errorChanger = setError(null)
+    },[sendRequest])
+
     return (<div>
         <Link to={'/'}>
             <Button variant="primary" className='nav-buttons'>Return to home page</Button>
         </Link>
             <Button variant="primary" onClick={randomOption} className='nav-buttons'>Change pokemon</Button>
             <form onSubmit={submitValue}>
-                <input type="text" value={inputValue} onChange={saveValue} />
+                <input type="text" value={inputValue} onChange={saveValue} placeholder={inputInfo()}/>
                 <button type="submit">Search</button>
             </form>
         {selectedPokemon == null ?  <div>Loading...</div> : 
