@@ -1,11 +1,11 @@
 const useFetchData = () => {
     const number = Math.floor(Math.random() * (99 - 0) + 0)
 
-    const returnedData = async (func) => {
+    const dataOfSelectedPokemon = async (func, id) => {
         try {
-            const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=60&offset=0')
+            const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
                 .then(resp => resp.json())
-            return func(response.results.map((elem) => elem.url))
+            return func(response)
         } catch (e) {
             console.log(e)
         }
@@ -22,9 +22,8 @@ const useFetchData = () => {
         }
     }
 
-    const pokemonListData = async (func) => {
-        try {
-            fetch('https://pokeapi.co/api/v2/pokemon?limit=16')
+    const pokemonListData = async (func, offset) => {
+            fetch(`https://pokeapi.co/api/v2/pokemon?limit=100&offset=${offset}`)
                 .then(response => response.json())
                 .then(data => {
                     const requests = data.results.map(pokemon => fetch(pokemon.url).then(response => response.json()));
@@ -39,13 +38,12 @@ const useFetchData = () => {
                 .catch(error => {
                     console.error('Error fetching Pokemon list:', error);
                 });
-        } catch (e) {
-            console.log(e)
-        }
     }
-    return {returnedData,
-            randomPokemonData,
-            pokemonListData}
+
+    return {randomPokemonData,
+            pokemonListData,
+            dataOfSelectedPokemon
+            }
 }
 
 
