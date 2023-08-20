@@ -40,9 +40,42 @@ const useFetchData = () => {
                 });
     }
 
+    const pokemonFromInput = async (func, text, error) => {
+        try {
+            const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${text}/`)
+                .then(resp => resp.json())
+            return func(response)
+        } catch (e) {
+            error(e)
+        }
+    }
+
+    const pokeItems = async (number, func) => {
+        try {
+            const response = await fetch(`https://pokeapi.co/api/v2/item/${number}`)
+                .then(resp => resp.json())
+            return func(response)
+        } catch (e) {
+            console.log(e)
+        }
+    }
+
+    const locations = async (number, func) => {
+        try {
+            const response = await fetch(`https://pokeapi.co/api/v2/location/${number}`)
+                .then(resp => resp.json())
+            return func(response)
+        } catch (e) {
+            console.log(e)
+        }
+    }
+
     return {randomPokemonData,
             pokemonListData,
-            dataOfSelectedPokemon
+            dataOfSelectedPokemon,
+            pokemonFromInput,
+            pokeItems,
+            locations
             }
 }
 
