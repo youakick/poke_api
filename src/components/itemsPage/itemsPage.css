@@ -1,0 +1,15 @@
+.items-container {
+    font-size: 30px;
+    color: blue;
+}
+
+.state-btn {
+    margin: 5px;
+    font-size: 13px;
+    color: yellow;
+}
+
+.item-image{
+    min-height: 50px;
+    min-width: 50px;
+}
