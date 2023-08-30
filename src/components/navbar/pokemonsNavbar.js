@@ -19,6 +19,9 @@ const PokemonsNavbar = () => {
         <Link to={'/about'}>
             <Button variant="primary" className='navigations'>About</Button>
         </Link>
+        <Link to={'/game'}>
+            <Button variant="primary" className='navigations'>Game</Button>
+        </Link>
         </div>
     )
 }

@@ -19,20 +19,20 @@ function PokemonsCarousel() {
           alt="First slide"
         />
         <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          <h3>Welcome in Pokemons Galaxy</h3>
+          <p>Let's start our adventures</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="https://wallpaper-mania.com/wp-content/uploads/2018/09/High_resolution_wallpaper_background_ID_77700074662-optimized.jpg"
+          src="https://cdn.custom-cursor.com/collections/129/cover-pokemon-preview.png"
           alt="Second slide"
         />
 
         <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <h3>Welcome in Pokemons Galaxy</h3>
+          <p>Let's start our adventures</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -43,9 +43,9 @@ function PokemonsCarousel() {
         />
 
         <Carousel.Caption>
-          <h3>Third slide label</h3>
+          <h3>Welcome in Pokemons Galaxy</h3>
           <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+          Let's start our adventures
           </p>
         </Carousel.Caption>
       </Carousel.Item>
@@ -57,9 +57,9 @@ function PokemonsCarousel() {
         />
 
         <Carousel.Caption>
-          <h3>Third slide label</h3>
+          <h3>Welcome in Pokemons Galaxy</h3>
           <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+          Let's start our adventures
           </p>
         </Carousel.Caption>
       </Carousel.Item>

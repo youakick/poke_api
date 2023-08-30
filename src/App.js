@@ -9,6 +9,7 @@ import PokemonsNavbar from './components/navbar/pokemonsNavbar';
 import AboutPage from './components/about/aboutPage';
 import ItemsPage from './components/itemsPage/itemsPage';
 import LocationsPage from './components/locations/locationsPage';
+import GamePage from './components/game/game';
 
 function App() {
   const Home = () => {
@@ -34,6 +35,8 @@ function App() {
           <Route exact path='/items' element={<ItemsPage/>}>
           </Route>
           <Route exact path='/locations' element={<LocationsPage/>}>
+          </Route>
+          <Route exact path='/game' element={<GamePage/>}>
           </Route>
         </Routes>
       </Router>

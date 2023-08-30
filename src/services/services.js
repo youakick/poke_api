@@ -12,9 +12,9 @@ const useFetchData = () => {
 
     }
 
-    const randomPokemonData = async (func) => {
+    const randomPokemonData = async (func, numb = number) => {
         try {
-            const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${number}/`)
+            const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${numb}/`)
                 .then(resp => resp.json())
             return func(response)
         } catch (e) {
